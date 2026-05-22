@@ -1,0 +1,227 @@
+{
+  "nav": {
+    "home": "Home",
+    "cyprus": "Cyprus",
+    "georgia": "Georgia",
+    "properties": "Properties",
+    "language": "UA"
+  },
+  "home": {
+    "hero": {
+      "title": "Investment Property. Tailored to Your Goals.",
+      "subtitle": "SafeEra Property Consulting — boutique service for international real estate investors. Cyprus, Georgia, Dubai.",
+      "cta_client": "Submit Inquiry",
+      "cta_partner": "Become a Partner",
+      "markets": "Cyprus · Georgia · Dubai (coming soon)"
+    },
+    "about": {
+      "title": "We don't sell properties — we build strategies",
+      "text_1": "SafeEra Property Consulting is a boutique service for those seeking not just square meters, but a working asset. We start with your goal: capital preservation, yield, residency — and find the right solution.",
+      "text_2": "Our approach is relationships, not transactions. We guide every client from strategy to deal, working only with vetted developers and legal experts in each market.",
+      "victoria": "Victoria — marketing, client experience",
+      "kristina": "Kristina — legal expertise, partner network"
+    },
+    "markets": {
+      "title": "Our Markets",
+      "cyprus": {
+        "name": "Cyprus",
+        "description": "Your asset in the heart of the EU. PRP from €300k.",
+        "cta": "Learn more"
+      },
+      "georgia": {
+        "name": "Georgia",
+        "description": "The easiest entry into international real estate. From $50k.",
+        "cta": "Learn more"
+      },
+      "dubai": {
+        "name": "Dubai",
+        "description": "Coming soon",
+        "cta": "Coming soon"
+      }
+    },
+    "services": {
+      "title": "Services",
+      "cta": "Discuss your goals",
+      "items": {
+        "strategy": {
+          "title": "Investment Strategy",
+          "description": "Analysis of goals, budget and investment horizon. Personalized action plan."
+        },
+        "selection": {
+          "title": "Property Selection",
+          "description": "Curated properties matching your strategy from vetted developers in each market."
+        },
+        "legal": {
+          "title": "Legal Support",
+          "description": "Full legal support: from property due diligence to contract signing."
+        },
+        "tax": {
+          "title": "Tax Navigation",
+          "description": "Investment structuring considering tax legislation of both countries."
+        },
+        "capital": {
+          "title": "Capital Legitimization",
+          "description": "Source of Wealth documentation preparation for compliance."
+        },
+        "residency": {
+          "title": "Residency Permit",
+          "description": "Guidance through the residency permit process via real estate investment."
+        }
+      }
+    },
+    "why": {
+      "title": "Why SafeEra",
+      "items": {
+        "client_first": {
+          "title": "Your goals come first",
+          "description": "We start with your objective, not a property listing."
+        },
+        "boutique": {
+          "title": "Boutique service",
+          "description": "Limited number of clients. Personal attention to each one."
+        },
+        "relationships": {
+          "title": "Relationships, not transactions",
+          "description": "We build long-term partnerships, not close deals."
+        },
+        "honesty": {
+          "title": "Honesty",
+          "description": "If a property doesn't fit — we'll say so directly. No hidden agendas."
+        },
+        "ukrainian": {
+          "title": "We understand Ukrainian context",
+          "description": "We know the regulatory landscape, currency controls, and capital export specifics."
+        },
+        "partners": {
+          "title": "Vetted partners",
+          "description": "We work only with developers we've personally verified."
+        }
+      }
+    },
+    "partners": {
+      "title": "Partners",
+      "text": "We collaborate with vetted developers and property management companies in each market. Our partners are not a database list — they are trusted relationships.",
+      "cta": "Become a Partner"
+    },
+    "client_form": {
+      "title": "Tell us about your goals",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "market": "Market",
+      "market_cyprus": "Cyprus",
+      "market_georgia": "Georgia",
+      "market_both": "Both",
+      "message": "Message",
+      "message_placeholder": "Describe your goals (optional)",
+      "submit": "Submit Inquiry",
+      "success": "Thank you! We'll get back to you shortly.",
+      "error": "An error occurred. Please try again or email info@safeeraconsulting.com"
+    },
+    "partner_form": {
+      "title": "Become a Partner",
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone",
+      "market": "Market",
+      "market_cyprus": "Cyprus",
+      "market_georgia": "Georgia",
+      "market_dubai": "Dubai",
+      "market_other": "Other",
+      "message": "Message",
+      "message_placeholder": "Tell us about your company (optional)",
+      "submit": "Submit Application",
+      "success": "Thank you! We'll review your application and get back to you.",
+      "error": "An error occurred. Please try again or email info@safeeraconsulting.com"
+    }
+  },
+  "cyprus": {
+    "hero": {
+      "title": "Cyprus — Your Asset in the Heart of the EU",
+      "subtitle": "Entry from €150k. Permanent Residence Permit from €300k investment."
+    },
+    "why": {
+      "title": "Why Cyprus",
+      "items": {
+        "eu": "EU member — jurisdiction with European guarantees",
+        "pmp": "PRP from €300k investment + €50k/year income",
+        "stable": "Stable market, English-speaking legal environment",
+        "capital": "Suitable for capital legitimization and asset structuring"
+      }
+    },
+    "types": {
+      "title": "Property Types",
+      "residential": {
+        "title": "Residential",
+        "description": "Apartments, villas from €150k"
+      },
+      "branded": {
+        "title": "Branded Residences",
+        "description": "Marriott, Wyndham — managed by hotel operators"
+      },
+      "commercial": {
+        "title": "Commercial",
+        "description": "Offices, retail spaces, warehouse complexes"
+      },
+      "offplan": {
+        "title": "Off-plan Projects",
+        "description": "Construction-stage investment with growth potential"
+      }
+    },
+    "residency": {
+      "title": "Residency Permit",
+      "conditions": "PRP requirements through real estate investment",
+      "benefits": "What permanent resident status in Cyprus provides",
+      "sow": "Source of Wealth — how we help you prepare"
+    },
+    "cta": "Explore Cyprus"
+  },
+  "georgia": {
+    "hero": {
+      "title": "Georgia — The Easiest Entry into International Real Estate",
+      "subtitle": "From $50k. High yields. Simple process."
+    },
+    "why": {
+      "title": "Why Georgia",
+      "items": {
+        "entry": "Low entry threshold — from $50k",
+        "simple": "One of the simplest markets for first international investment",
+        "residency": "Residency — simple and fast track",
+        "roi": "High potential yield from short-term rentals",
+        "no_restrictions": "No restrictions for foreigners purchasing property"
+      }
+    },
+    "types": {
+      "title": "Property Types",
+      "batumi": {
+        "title": "Off-plan Apartments in Batumi",
+        "description": "Construction-stage investment with high rental potential"
+      },
+      "tbilisi": {
+        "title": "Apartments in Tbilisi",
+        "description": "For long-term or short-term rental"
+      },
+      "commercial": {
+        "title": "Commercial Property",
+        "description": "Retail and office spaces"
+      }
+    },
+    "roi": {
+      "title": "Returns",
+      "yield": "Estimated rental yield",
+      "management": "Property management: oversight and reporting",
+      "exit": "Exit strategy: when and how to divest"
+    },
+    "cta": "Explore Georgia"
+  },
+  "properties": {
+    "title": "Property Catalog",
+    "subtitle": "This section is coming soon. Submit an inquiry and we'll find properties matching your goals."
+  },
+  "footer": {
+    "slogan": "Trust · Discretion · Legacy",
+    "copyright": "© 2026 SafeEra Property Consulting. All rights reserved.",
+    "coming_soon": "coming soon"
+  }
+}
