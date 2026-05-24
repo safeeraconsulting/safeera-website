@@ -1,16 +1,31 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
+import {useLocale} from 'next-intl';
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const locale = useLocale();
+
+  const videoSrc = locale === 'en' ? '/video/hero-en.mp4' : '/video/hero-uk.mp4';
 
   return (
     <section className="min-h-screen relative text-white overflow-hidden isolate">
-      {/* Video background (desktop) / Photo fallback (mobile) */}
+      {/* Video background (desktop) / gradient fallback (mobile) */}
       <div className="absolute inset-0 z-0">
-        {/* Placeholder gradient until real video is added */}
-        <div className="absolute inset-0 h-full bg-gradient-to-br from-[#2a2a26] via-[#1b231d] to-[#0e1410]" />
+        {/* Mobile fallback gradient */}
+        <div className="absolute inset-0 h-full bg-gradient-to-br from-[#2a2a26] via-[#1b231d] to-[#0e1410] lg:hidden" />
+        {/* Desktop video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="hidden lg:block absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+        {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(20,27,22,0.25)] via-[rgba(20,27,22,0.05)] to-[rgba(20,27,22,0.55)] z-[1]" />
       </div>
 

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import {useLocale} from 'next-intl';
 
 const marketData = [
-  {key: 'cyprus', href: '/cyprus', index: '01', flag: 'CY', gradient: 'from-[#d9c4a4] via-[#b89b76] via-65% to-[#345065]'},
-  {key: 'georgia', href: '/georgia', index: '02', flag: 'GE', gradient: 'from-[#c8a26a] via-[#8a6a48] via-65% to-[#1f2a22]'},
-  {key: 'dubai', href: '/dubai', index: '03', flag: 'AE', gradient: 'from-[#2a2026] via-[#4a3140] via-65% to-[#d4a86c]'},
+  {key: 'cyprus', href: '/cyprus', index: '01', flag: 'CY', image: '/images/cyprus.jpg'},
+  {key: 'georgia', href: '/georgia', index: '02', flag: 'GE', image: '/images/georgia.jpg'},
+  {key: 'dubai', href: '/dubai', index: '03', flag: 'AE', image: '/images/dubai.jpg'},
 ];
 
 export default function Markets() {
@@ -36,8 +36,13 @@ export default function Markets() {
               href={`/${locale}${market.href}`}
               className="group relative overflow-hidden aspect-[3/4] flex flex-col justify-end"
             >
-              {/* Background */}
-              <div className={`absolute inset-0 bg-gradient-to-b ${market.gradient} transition-all duration-500 group-hover:blur-[6px] group-hover:scale-105`} />
+              {/* Background photo */}
+              <img
+                src={market.image}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:blur-[6px] group-hover:scale-105"
+                loading="lazy"
+              />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-all duration-500" />
 
               {/* Index + Flag */}

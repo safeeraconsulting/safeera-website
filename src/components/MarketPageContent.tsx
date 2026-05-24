@@ -7,6 +7,12 @@ import {useState} from 'react';
 
 type MarketKey = 'cy' | 'ge' | 'ae';
 
+const heroImages: Record<MarketKey, string> = {
+  cy: '/images/cyprus.jpg',
+  ge: '/images/georgia.jpg',
+  ae: '/images/dubai.jpg',
+};
+
 export default function MarketPageContent({market, hiddenMarketValue}: {market: MarketKey; hiddenMarketValue: string}) {
   const t = useTranslations(market);
   const tf = useTranslations('formClient');
@@ -59,8 +65,9 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-end bg-gradient-to-br from-forest to-forest/80">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-forest/60" />
+      <section className="relative min-h-[70vh] flex items-end">
+        <img src={heroImages[market]} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/30 via-forest/10 to-forest/70" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 pt-32 w-full">
           <div className="mb-4 text-sm text-white/60 tracking-widest uppercase font-montserrat">
             <Link href={`/${locale}`} className="hover:text-white transition">{tn('home')}</Link>

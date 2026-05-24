@@ -7,8 +7,11 @@ export default function ParallaxCta() {
 
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center text-white overflow-hidden">
-      {/* Parallax background */}
-      <div className="absolute inset-0 bg-fixed bg-center bg-cover bg-gradient-to-b from-[#b9a886] via-[#7a6b50] to-[#2a2a26]" />
+      {/* Parallax background — uses Cyprus photo as atmospheric background */}
+      <div
+        className="absolute inset-0 bg-fixed bg-center bg-cover"
+        style={{backgroundImage: 'url(/images/cyprus.jpg)'}}
+      />
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 text-center px-[clamp(20px,5vw,80px)] max-w-[720px]">
