@@ -2,6 +2,7 @@
 
 import {useTranslations} from 'next-intl';
 import {useEffect, useState} from 'react';
+import Image from 'next/image';
 
 export default function About() {
   const t = useTranslations('sections');
@@ -20,13 +21,27 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-[clamp(40px,6vw,88px)] items-center">
           {/* Slideshow */}
           <div className="relative aspect-square overflow-hidden">
-            {/* Slide 1 */}
+            {/* Slide 1 — Крістіна */}
             <div className={`absolute inset-0 transition-opacity duration-[1200ms] ease-out ${activeSlide === 0 ? 'opacity-100' : 'opacity-0'}`}>
-              <div className="w-full h-full bg-gradient-to-br from-[#c8b69a] via-[#8a6e54] to-[#3a2e26]" />
+              <Image
+                src="/images/founder-kristina.png"
+                alt={t('founder1Name')}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-5 pb-5 pt-10">
+                <div className="text-[10px] tracking-[0.22em] uppercase text-white/70 mb-1">{t('founder1Role')}</div>
+                <div className="font-cormorant font-medium text-[clamp(20px,1.5vw,24px)] text-white">{t('founder1Name')}</div>
+              </div>
             </div>
-            {/* Slide 2 */}
+            {/* Slide 2 — Вікторія (placeholder) */}
             <div className={`absolute inset-0 transition-opacity duration-[1200ms] ease-out ${activeSlide === 1 ? 'opacity-100' : 'opacity-0'}`}>
               <div className="w-full h-full bg-gradient-to-br from-[#c8b69a] via-[#8a6e54] to-[#3a2e26] hue-rotate-[20deg]" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-5 pb-5 pt-10">
+                <div className="text-[10px] tracking-[0.22em] uppercase text-white/70 mb-1">{t('founder2Role')}</div>
+                <div className="font-cormorant font-medium text-[clamp(20px,1.5vw,24px)] text-white">{t('founder2Name')}</div>
+              </div>
             </div>
             {/* Dots */}
             <div className="absolute bottom-[18px] right-5 z-10 flex gap-1.5">
@@ -54,16 +69,6 @@ export default function About() {
             <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP2')}</p>
             <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP3')}</p>
 
-            <div className="grid grid-cols-2 gap-7 mt-8 pt-8 border-t border-forest/15">
-              <div>
-                <div className="text-[10px] tracking-[0.22em] uppercase opacity-55 mb-1.5">{t('founder1Role')}</div>
-                <div className="font-cormorant font-medium text-[clamp(22px,1.7vw,26px)] leading-tight">{t('founder1Name')}</div>
-              </div>
-              <div>
-                <div className="text-[10px] tracking-[0.22em] uppercase opacity-55 mb-1.5">{t('founder2Role')}</div>
-                <div className="font-cormorant font-medium text-[clamp(22px,1.7vw,26px)] leading-tight">{t('founder2Name')}</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
