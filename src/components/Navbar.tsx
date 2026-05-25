@@ -46,15 +46,16 @@ export default function Navbar() {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between transition-all duration-300 ease-out px-[clamp(20px,5vw,80px)] ${scrolled ? 'py-3.5 bg-forest/85 backdrop-blur-sm text-off-white' : 'py-5 text-white'}`}>
-        <Link href={`/${currentLocale}`} className="inline-flex items-center">
+        <Link href={`/${currentLocale}`} className="inline-flex items-center gap-3">
           <Image
-            src="/logo/logo_monochrome.svg"
+            src="/logo/logo_mark.svg"
             alt="SafeEra"
-            width={160}
+            width={40}
             height={40}
-            className="h-8 w-auto brightness-0 invert"
+            className="h-9 w-auto brightness-0 invert"
             priority
           />
+          <span className="font-cormorant font-normal text-[22px] tracking-[0.01em]">SafeEra</span>
         </Link>
 
         <ul className="hidden lg:flex gap-9 list-none items-center text-[11px] font-medium tracking-[0.18em] uppercase">
