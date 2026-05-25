@@ -56,7 +56,9 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
     label: t(`f${i}`),
   }));
 
-  const darkRows = [1, 2, 3, 4].map(i => ({
+  const darkRowCountMap: Record<MarketKey, number> = {cy: 3, ge: 4, ae: 4};
+  const darkRowCount = darkRowCountMap[market];
+  const darkRows = Array.from({length: darkRowCount}, (_, i) => i + 1).map(i => ({
     tag: t(`d${i}tag`),
     title: t(`d${i}t`),
     desc: t(`d${i}d`),
@@ -77,9 +79,11 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
           <h1 className="font-cormorant text-4xl md:text-6xl lg:text-7xl font-light text-white max-w-4xl mb-6">
             {t('h1')}
           </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-8 font-light">
-            {t('lead')}
-          </p>
+          {t('lead') && (
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-8 font-light">
+              {t('lead')}
+            </p>
+          )}
           <a
             href="#market-form"
             className="inline-flex items-center gap-2 bg-lime text-forest px-8 py-4 text-sm font-semibold uppercase tracking-wider hover:bg-lime/90 transition"
@@ -193,7 +197,6 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
               <p className="text-forest/70 text-lg font-light mb-8">{t('formBody')}</p>
               <div className="space-y-2">
                 <a href={`mailto:${t('formEmail')}`} className="block text-forest/80 hover:text-lime transition text-sm">{t('formEmail')}</a>
-                <a href="https://t.me/SafeEraInvest" target="_blank" rel="noopener" className="block text-forest/80 hover:text-lime transition text-sm">t.me/SafeEraInvest</a>
               </div>
             </div>
 

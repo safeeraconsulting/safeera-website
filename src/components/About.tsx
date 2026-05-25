@@ -39,8 +39,7 @@ export default function About() {
           <div>
             <div className="eyebrow mb-7">{t('aboutEyebrow')}</div>
             <h2 className="font-cormorant font-normal text-[clamp(38px,5.2vw,72px)] leading-[1.02] tracking-[-0.015em] mb-6">
-              {t('aboutTitle1')}<br />
-              <em className="italic">{t('aboutTitle2')}</em>
+              {t('aboutTitle')}
             </h2>
 
             <ul className="list-none grid grid-cols-3 gap-px bg-forest/15 my-8">
@@ -53,17 +52,16 @@ export default function About() {
 
             <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP1')}</p>
             <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP2')}</p>
+            <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP3')}</p>
 
             <div className="grid grid-cols-2 gap-7 mt-8 pt-8 border-t border-forest/15">
               <div>
                 <div className="text-[10px] tracking-[0.22em] uppercase opacity-55 mb-1.5">{t('founder1Role')}</div>
                 <div className="font-cormorant font-medium text-[clamp(22px,1.7vw,26px)] leading-tight">{t('founder1Name')}</div>
-                <div className="text-sm font-light mt-1 opacity-70">{t('founder1Bio')}</div>
               </div>
               <div>
                 <div className="text-[10px] tracking-[0.22em] uppercase opacity-55 mb-1.5">{t('founder2Role')}</div>
                 <div className="font-cormorant font-medium text-[clamp(22px,1.7vw,26px)] leading-tight">{t('founder2Name')}</div>
-                <div className="text-sm font-light mt-1 opacity-70">{t('founder2Bio')}</div>
               </div>
             </div>
           </div>

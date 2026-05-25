@@ -8,7 +8,6 @@ import ParallaxCta from '@/components/ParallaxCta';
 import MidsiteVideo from '@/components/MidsiteVideo';
 import Partners from '@/components/Partners';
 import ClientForm from '@/components/ClientForm';
-import PartnerForm from '@/components/PartnerForm';
 
 export default function HomePage() {
   return (
@@ -23,7 +22,6 @@ export default function HomePage() {
       <MidsiteVideo />
       <Partners />
       <ClientForm />
-      <PartnerForm />
     </main>
   );
 }

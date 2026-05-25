@@ -65,7 +65,6 @@ export default function ClientForm() {
           </p>
           <div className="flex flex-col gap-2 text-sm opacity-70">
             <a href="mailto:info@safeeraconsulting.com" className="hover:opacity-100 transition-opacity">info@safeeraconsulting.com</a>
-            <a href="https://t.me/SafeEraInvest" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">t.me/SafeEraInvest</a>
           </div>
         </div>
 

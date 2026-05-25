@@ -17,9 +17,14 @@ export default function Statement() {
             </h1>
           </div>
           <div>
-            <p className="text-[clamp(16px,1.2vw,19px)] leading-relaxed max-w-[460px] mb-9 opacity-85 font-light">
-              {t('sub')}
-            </p>
+            <ul className="list-none max-w-[460px] mb-9 flex flex-col gap-2.5">
+              {['bullet1', 'bullet2', 'bullet3'].map((key) => (
+                <li key={key} className="flex items-start gap-3 text-[clamp(16px,1.2vw,19px)] leading-relaxed opacity-85 font-light">
+                  <span className="mt-[0.55em] w-1.5 h-1.5 shrink-0 rounded-full bg-lime" />
+                  {t(key)}
+                </li>
+              ))}
+            </ul>
             <div className="flex flex-wrap gap-3.5">
               <a href="#client-form-section" className="inline-flex items-center gap-3 px-7 py-[18px] bg-lime text-forest font-medium text-xs tracking-[0.18em] uppercase rounded-full hover:bg-lime-soft transition-all">
                 {t('ctaClient')}
