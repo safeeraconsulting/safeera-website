@@ -43,18 +43,6 @@ export default function Partners() {
   return (
     <section id="partner-form-section" className="bg-forest text-off-white py-[clamp(72px,9vw,140px)] px-[clamp(20px,5vw,80px)]">
       <div className="max-w-[1440px] mx-auto">
-        {/* Top: Partners intro */}
-        <div className="mb-[clamp(48px,6vw,80px)]">
-          <div className="eyebrow text-lime mb-[22px]">{t('partnersEyebrow')}</div>
-          <h2 className="font-cormorant font-normal text-[clamp(38px,5.2vw,72px)] leading-[1.02] tracking-[-0.015em] mb-6 max-w-[720px]">
-            {t('partnersTitle')}
-          </h2>
-          <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light opacity-80 max-w-[540px]">
-            {t('partnersBody')}
-          </p>
-        </div>
-
-        {/* Bottom: CTA + Form */}
         {submitted ? (
           <div className="text-center py-20">
             <h3 className="font-cormorant font-medium text-[clamp(26px,2.4vw,36px)] leading-tight mb-4">{tf('successTitle')}</h3>
@@ -63,14 +51,21 @@ export default function Partners() {
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(40px,6vw,88px)]">
             <div>
-              <h3 className="font-cormorant font-normal text-[clamp(28px,3vw,44px)] leading-[1.08] tracking-[-0.01em] mb-4">
-                {t('partnerCtaTitle')}
-              </h3>
-              <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light opacity-80 max-w-[460px] mb-8">
-                {t('partnerCtaBody')}
+              <div className="eyebrow text-lime mb-[22px]">{t('partnersEyebrow')}</div>
+              <h2 className="font-cormorant font-normal text-[clamp(38px,5.2vw,72px)] leading-[1.02] tracking-[-0.015em] mb-6">
+                {t('partnersTitle')}
+              </h2>
+              <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light opacity-80 max-w-[460px] mb-10">
+                {t('partnersBody')}
               </p>
-              <div className="flex flex-col gap-2 text-sm opacity-70">
-                <a href="mailto:partners@safeeraconsulting.com" className="hover:opacity-100 transition-opacity">partners@safeeraconsulting.com</a>
+              <div className="border-t border-off-white/15 pt-8">
+                <h3 className="font-cormorant font-normal text-[clamp(26px,2.4vw,36px)] leading-[1.08] tracking-[-0.01em] mb-3">
+                  {t('partnerCtaTitle')}
+                </h3>
+                <p className="text-[clamp(15px,1.1vw,17px)] leading-relaxed font-light opacity-70 max-w-[400px] mb-5">
+                  {t('partnerCtaBody')}
+                </p>
+                <a href="mailto:partners@safeeraconsulting.com" className="text-sm opacity-70 hover:opacity-100 transition-opacity">partners@safeeraconsulting.com</a>
               </div>
             </div>
 

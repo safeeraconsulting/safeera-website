@@ -27,7 +27,7 @@ export default function About() {
                 src="/images/founder-kristina.png"
                 alt={t('founder1Name')}
                 fill
-                className="object-cover"
+                className="object-cover object-bottom"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-5 pb-5 pt-10">
@@ -35,9 +35,15 @@ export default function About() {
                 <div className="font-cormorant font-medium text-[clamp(20px,1.5vw,24px)] text-white">{t('founder1Name')}</div>
               </div>
             </div>
-            {/* Slide 2 — Вікторія (placeholder) */}
+            {/* Slide 2 — Вікторія */}
             <div className={`absolute inset-0 transition-opacity duration-[1200ms] ease-out ${activeSlide === 1 ? 'opacity-100' : 'opacity-0'}`}>
-              <div className="w-full h-full bg-gradient-to-br from-[#c8b69a] via-[#8a6e54] to-[#3a2e26] hue-rotate-[20deg]" />
+              <Image
+                src="/images/founder-viktoriia.png"
+                alt={t('founder2Name')}
+                fill
+                className="object-cover object-bottom"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-5 pb-5 pt-10">
                 <div className="text-[10px] tracking-[0.22em] uppercase text-white/70 mb-1">{t('founder2Role')}</div>
                 <div className="font-cormorant font-medium text-[clamp(20px,1.5vw,24px)] text-white">{t('founder2Name')}</div>
@@ -57,9 +63,9 @@ export default function About() {
               {t('aboutTitle')}
             </h2>
 
-            <ul className="list-none grid grid-cols-3 gap-px bg-forest/15 my-8">
-              {['tenet1', 'tenet2', 'tenet3'].map((key) => (
-                <li key={key} className="bg-white py-[22px] pr-[18px] text-[11px] tracking-[0.18em] uppercase font-medium">
+            <ul className="list-none grid grid-cols-3 my-8">
+              {['tenet1', 'tenet2', 'tenet3'].map((key, i) => (
+                <li key={key} className={`py-[22px] text-[11px] tracking-[0.18em] uppercase font-medium ${i > 0 ? 'border-l border-forest/15 pl-[18px]' : 'pr-[18px]'}`}>
                   {t(key)}
                 </li>
               ))}
