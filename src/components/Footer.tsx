@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-off-white/10 pt-6 flex justify-center items-center gap-4 text-[11px] opacity-40 tracking-[0.06em]">
+      <div className="border-t border-off-white/10 pt-6 flex justify-center items-center gap-4 text-[11px] opacity-60 tracking-[0.06em]">
         <span>{t('copy')}</span>
       </div>
     </footer>
