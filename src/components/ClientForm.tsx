@@ -10,7 +10,7 @@ export default function ClientForm() {
   const [loading, setLoading] = useState(false);
   const [selectedMarket, setSelectedMarket] = useState(0);
 
-  const markets = [t('market1'), t('market2'), t('market3'), t('market4'), t('market5')];
+  const markets = [t('market1'), t('market2'), t('market3'), t('market4')];
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
