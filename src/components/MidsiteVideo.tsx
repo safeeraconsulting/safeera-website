@@ -6,27 +6,18 @@ import {useEffect, useRef, useState} from 'react';
 export default function MidsiteVideo() {
   const t = useTranslations('sections');
   const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1024px)');
-    setIsDesktop(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
-  }, []);
+  const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
     if (!sectionRef.current) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setShouldLoad(true);
           observer.disconnect();
         }
       },
-      {rootMargin: '200px'}
+      {rootMargin: '600px'} // start loading ~1-2 sections before visible
     );
     observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -34,10 +25,10 @@ export default function MidsiteVideo() {
 
   return (
     <section ref={sectionRef} className="relative min-h-[80vh] flex items-center justify-center text-white overflow-hidden">
-      {/* Mobile fallback gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest-2 to-forest lg:hidden" />
-      {/* Desktop video — lazy loaded, only on desktop */}
-      {isDesktop && isVisible && (
+      {/* Gradient fallback — always visible until video loads */}
+      <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest-2 to-forest" />
+      {/* Video — lazy loaded, plays on all devices */}
+      {shouldLoad && (
         <video
           autoPlay
           muted
