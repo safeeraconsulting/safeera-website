@@ -10,7 +10,7 @@ export default function ClientForm() {
   const [loading, setLoading] = useState(false);
   const [selectedMarket, setSelectedMarket] = useState(0);
 
-  const markets = [t('market1'), t('market2'), t('market3'), t('market4')];
+  const markets = [t('market1'), t('market2'), t('market3'), t('market4'), t('market5')];
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -56,7 +56,7 @@ export default function ClientForm() {
     <section id="client-form-section" className="bg-white text-forest py-[clamp(72px,9vw,140px)] px-[clamp(20px,5vw,80px)]">
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[clamp(40px,6vw,88px)]">
         <div>
-          <div className="eyebrow mb-[22px]">{ts('clientFormEyebrow')}</div>
+          {/* <div className="eyebrow mb-[22px]">{ts('clientFormEyebrow')}</div> */}
           <h2 className="font-cormorant font-normal text-[clamp(38px,5.2vw,72px)] leading-[1.02] tracking-[-0.015em] mb-6">
             {ts('clientFormTitle')}
           </h2>

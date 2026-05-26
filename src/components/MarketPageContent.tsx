@@ -13,6 +13,12 @@ const heroImages: Record<MarketKey, string> = {
   ae: '/images/dubai.jpg',
 };
 
+const typeImages: Record<MarketKey, string[]> = {
+  cy: ['/images/types-cy/residential.png', '/images/types-cy/branded.png', '/images/types-cy/commercial.png', '/images/types-cy/offplan.png'],
+  ge: ['/images/types-ge/batumi.png', '/images/types-ge/tbilisi.png', '/images/types-ge/commercial.png', '/images/types-ge/mountain.png'],
+  ae: ['/images/types-ae/downtown.png', '/images/types-ae/branded.png', '/images/types-ae/offplan.png', '/images/types-ae/villas.png'],
+};
+
 export default function MarketPageContent({market, hiddenMarketValue}: {market: MarketKey; hiddenMarketValue: string}) {
   const t = useTranslations(market);
   const tf = useTranslations('formClient');
@@ -56,7 +62,7 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
     label: t(`f${i}`),
   }));
 
-  const darkRowCountMap: Record<MarketKey, number> = {cy: 3, ge: 4, ae: 4};
+  const darkRowCountMap: Record<MarketKey, number> = {cy: 3, ge: 4, ae: 3};
   const darkRowCount = darkRowCountMap[market];
   const darkRows = Array.from({length: darkRowCount}, (_, i) => i + 1).map(i => ({
     tag: t(`d${i}tag`),
@@ -115,7 +121,7 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-forest/50 mb-5">{t('whyEye')}</div>
+              {/* <div className="text-xs uppercase tracking-[0.2em] text-forest/50 mb-5">{t('whyEye')}</div> */}
               <h2 className="font-cormorant text-3xl md:text-5xl font-light text-forest">{t('whyTitle')}</h2>
             </div>
             <div className="flex items-end">
@@ -140,14 +146,14 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
-            <div className="text-xs uppercase tracking-[0.2em] text-forest/50 mb-5">{t('typesEye')}</div>
+            {/* <div className="text-xs uppercase tracking-[0.2em] text-forest/50 mb-5">{t('typesEye')}</div> */}
             <h2 className="font-cormorant text-3xl md:text-5xl font-light text-forest">{t('typesTitle')}</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {types.map((tp, i) => (
               <div key={i} className="group">
-                <div className="aspect-[4/3] bg-gradient-to-br from-forest/10 to-forest/5 rounded-sm mb-4 flex items-center justify-center">
-                  <span className="text-forest/30 text-xs uppercase tracking-wider">{tp.cat}</span>
+                <div className="aspect-[4/3] rounded-sm mb-4 overflow-hidden">
+                  <img src={typeImages[market][i]} alt={tp.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="text-xs uppercase tracking-wider text-forest/50 mb-1">{tp.cat}</div>
                 <h4 className="text-forest font-semibold mb-1">{tp.title}</h4>
@@ -163,7 +169,7 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-lime mb-5">{t('darkEye')}</div>
+              {/* <div className="text-xs uppercase tracking-[0.2em] text-lime mb-5">{t('darkEye')}</div> */}
               <h2 className="font-cormorant text-3xl md:text-5xl font-light mb-6">{t('darkTitle')}</h2>
               <p className="text-white/70 font-light leading-relaxed">{t('darkBody')}</p>
               {market === 'ge' && (
@@ -192,7 +198,7 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-forest/50 mb-5">{t('formEye')}</div>
+              {/* <div className="text-xs uppercase tracking-[0.2em] text-forest/50 mb-5">{t('formEye')}</div> */}
               <h2 className="font-cormorant text-3xl md:text-5xl font-light text-forest mb-6">{t('formTitle')}</h2>
               <p className="text-forest/70 text-lg font-light mb-8">{t('formBody')}</p>
               <div className="space-y-2">

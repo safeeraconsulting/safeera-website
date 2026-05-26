@@ -51,22 +51,13 @@ export default function Partners() {
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(40px,6vw,88px)]">
             <div>
-              <div className="eyebrow text-lime mb-[22px]">{t('partnersEyebrow')}</div>
-              <h2 className="font-cormorant font-normal text-[clamp(38px,5.2vw,72px)] leading-[1.02] tracking-[-0.015em] mb-6">
-                {t('partnersTitle')}
-              </h2>
-              <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light opacity-80 max-w-[460px] mb-10">
-                {t('partnersBody')}
+              <h3 className="font-cormorant font-normal text-[clamp(38px,5.2vw,72px)] leading-[1.02] tracking-[-0.015em] mb-4">
+                {t('partnerCtaTitle')}
+              </h3>
+              <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light opacity-80 max-w-[460px] mb-8">
+                {t('partnerCtaBody')}
               </p>
-              <div className="border-t border-off-white/15 pt-8">
-                <h3 className="font-cormorant font-normal text-[clamp(26px,2.4vw,36px)] leading-[1.08] tracking-[-0.01em] mb-3">
-                  {t('partnerCtaTitle')}
-                </h3>
-                <p className="text-[clamp(15px,1.1vw,17px)] leading-relaxed font-light opacity-70 max-w-[400px] mb-5">
-                  {t('partnerCtaBody')}
-                </p>
-                <a href="mailto:partners@safeeraconsulting.com" className="text-sm opacity-70 hover:opacity-100 transition-opacity">partners@safeeraconsulting.com</a>
-              </div>
+              <a href="mailto:partners@safeeraconsulting.com" className="text-sm opacity-70 hover:opacity-100 transition-opacity">partners@safeeraconsulting.com</a>
             </div>
 
             <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">

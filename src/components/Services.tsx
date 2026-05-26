@@ -11,7 +11,7 @@ export default function Services() {
     <section id="services" className="bg-white text-forest py-[clamp(72px,9vw,140px)] px-[clamp(20px,5vw,80px)]">
       <div className="max-w-[1440px] mx-auto">
         <div className="mb-[clamp(48px,6vw,80px)]">
-          <div className="eyebrow mb-[22px]">{ts('servicesEyebrow')}</div>
+          {/* <div className="eyebrow mb-[22px]">{ts('servicesEyebrow')}</div> */}
           <h2 className="font-cormorant font-normal text-[clamp(38px,5.2vw,72px)] leading-[1.02] tracking-[-0.015em] max-w-[800px]">
             {ts('servicesTitle')}
           </h2>

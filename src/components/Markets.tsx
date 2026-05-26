@@ -17,7 +17,7 @@ export default function Markets() {
       <div className="max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-[clamp(48px,6vw,80px)] items-end">
           <div>
-            <div className="eyebrow mb-[22px]">{t('sections.marketsEyebrow')}</div>
+            {/* <div className="eyebrow mb-[22px]">{t('sections.marketsEyebrow')}</div> */}
             <h2 className="font-cormorant font-normal text-[clamp(38px,5.2vw,72px)] leading-[1.02] tracking-[-0.015em]">
               {t('sections.marketsTitle')}
             </h2>
@@ -46,9 +46,9 @@ export default function Markets() {
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-all duration-500" />
 
               {/* Index + Flag */}
-              <span className="absolute top-5 left-5 text-[10px] tracking-[0.22em] uppercase text-white/50 z-10">
+              {/* <span className="absolute top-5 left-5 text-[10px] tracking-[0.22em] uppercase text-white/50 z-10">
                 {market.index} / Market
-              </span>
+              </span> */}
               <span className="absolute top-5 right-5 text-[11px] tracking-[0.18em] uppercase text-white/70 font-medium z-10">
                 {market.flag}
               </span>

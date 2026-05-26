@@ -10,7 +10,7 @@ export default function ParallaxCta() {
       {/* Parallax background */}
       <div
         className="absolute inset-0 bg-fixed bg-center bg-cover"
-        style={{backgroundImage: 'url(/images/parallax.jpg)'}}
+        style={{backgroundImage: 'url(/images/parallax-cta.png)'}}
       />
       <div className="absolute inset-0 bg-black/50" />
 

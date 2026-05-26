@@ -17,8 +17,8 @@ export default function HomePage() {
       <About />
       <Markets />
       <Services />
-      <WhySafeera />
       <ParallaxCta />
+      <WhySafeera />
       <MidsiteVideo />
       <Partners />
       <ClientForm />

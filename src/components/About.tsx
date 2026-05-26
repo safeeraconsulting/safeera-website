@@ -7,6 +7,7 @@ import Image from 'next/image';
 export default function About() {
   const t = useTranslations('sections');
   const [activeSlide, setActiveSlide] = useState(0);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -58,7 +59,7 @@ export default function About() {
 
           {/* Copy */}
           <div>
-            <div className="eyebrow mb-7">{t('aboutEyebrow')}</div>
+            {/* <div className="eyebrow mb-7">{t('aboutEyebrow')}</div> */}
             <h2 className="font-cormorant font-normal text-[clamp(38px,5.2vw,72px)] leading-[1.02] tracking-[-0.015em] mb-6">
               {t('aboutTitle')}
             </h2>
@@ -71,9 +72,20 @@ export default function About() {
               ))}
             </ul>
 
-            <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP1')}</p>
-            <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP2')}</p>
-            <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP3')}</p>
+            <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP1visible')}</p>
+            <div className={`grid transition-[grid-template-rows] duration-500 ease-out ${expanded ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+              <div className="overflow-hidden">
+                <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP1hidden')}</p>
+                <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP2')}</p>
+                <p className="text-[clamp(16px,1.15vw,18px)] leading-relaxed font-light mb-4 max-w-[540px]">{t('aboutP3')}</p>
+              </div>
+            </div>
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="text-[13px] font-medium tracking-[0.1em] uppercase text-forest/60 hover:text-forest transition-colors mt-1"
+            >
+              {expanded ? t('aboutCollapse') : t('aboutExpand')}
+            </button>
 
           </div>
         </div>
