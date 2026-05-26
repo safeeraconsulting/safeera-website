@@ -3,28 +3,39 @@
 import {useTranslations} from 'next-intl';
 import {useLocale} from 'next-intl';
 import Image from 'next/image';
+import {useEffect, useState} from 'react';
 
 export default function Hero() {
   const t = useTranslations('hero');
   const locale = useLocale();
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const videoSrc = locale === 'en' ? '/video/hero-en.mp4' : '/video/hero-uk.mp4';
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)');
+    setIsDesktop(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   return (
     <section className="h-dvh relative text-white overflow-hidden isolate">
       {/* Video background (desktop) / still image (mobile) */}
       <div className="absolute inset-0 z-0">
-        {/* Desktop video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          className="hidden lg:block absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
+        {/* Desktop video — only rendered on desktop to prevent mobile download */}
+        {isDesktop && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        )}
         {/* Mobile still image with logo */}
         <div className="absolute inset-0 z-10 lg:hidden">
           <Image src="/images/hero-still.png" alt="" fill className="object-cover" priority />

@@ -8,20 +8,21 @@ import ParallaxCta from '@/components/ParallaxCta';
 import MidsiteVideo from '@/components/MidsiteVideo';
 import Partners from '@/components/Partners';
 import ClientForm from '@/components/ClientForm';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function HomePage() {
   return (
     <main>
       <Hero />
-      <Statement />
-      <About />
-      <Markets />
-      <Services />
+      <ScrollReveal><Statement /></ScrollReveal>
+      <ScrollReveal><About /></ScrollReveal>
+      <ScrollReveal><Markets /></ScrollReveal>
+      <ScrollReveal><Services /></ScrollReveal>
       <ParallaxCta />
-      <WhySafeera />
+      <ScrollReveal><WhySafeera /></ScrollReveal>
       <MidsiteVideo />
-      <Partners />
-      <ClientForm />
+      <ScrollReveal><Partners /></ScrollReveal>
+      <ScrollReveal><ClientForm /></ScrollReveal>
     </main>
   );
 }
