@@ -69,7 +69,7 @@ export default function ClientForm() {
         </div>
 
         <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
-          <div className="honeypot"><input type="text" name="website" tabIndex={-1} autoComplete="off" /></div>
+          <div className="honeypot"><input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" aria-label="Leave empty" /></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="flex flex-col gap-2">

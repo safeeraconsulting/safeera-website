@@ -216,7 +216,7 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="space-y-5">
                   <div className="absolute opacity-0 h-0 overflow-hidden pointer-events-none" aria-hidden="true">
-                    <input type="text" name="website" tabIndex={-1} autoComplete="off" value={honeypot} onChange={e => setHoneypot(e.target.value)} />
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-label="Leave empty" value={honeypot} onChange={e => setHoneypot(e.target.value)} />
                   </div>
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>

@@ -12,11 +12,11 @@ export default function Footer() {
         <div>
           <div className="font-cormorant text-2xl font-normal mb-3">SafeEra</div>
           <div className="text-[11px] tracking-[0.18em] uppercase opacity-60">{t('tagline')}</div>
-          <div className="mt-7 text-[11px] opacity-50 tracking-[0.18em] uppercase">{t('builtIn')}</div>
+          <div className="mt-7 text-[11px] opacity-60 tracking-[0.18em] uppercase">{t('builtIn')}</div>
         </div>
 
         <div>
-          <h4 className="text-[11px] tracking-[0.22em] uppercase font-medium text-lime mb-5">{t('nav')}</h4>
+          <div className="text-[11px] tracking-[0.22em] uppercase font-medium text-lime mb-5">{t('nav')}</div>
           <ul className="list-none flex flex-col gap-3 text-sm font-light opacity-70">
             <li><Link href={`/${locale}`} className="hover:opacity-100 transition-opacity">{tn('home')}</Link></li>
             <li><Link href={`/${locale}/cyprus`} className="hover:opacity-100 transition-opacity">{tn('cyprus')}</Link></li>
@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-[11px] tracking-[0.22em] uppercase font-medium text-lime mb-5">{t('contact')}</h4>
+          <div className="text-[11px] tracking-[0.22em] uppercase font-medium text-lime mb-5">{t('contact')}</div>
           <ul className="list-none flex flex-col gap-3 text-sm font-light opacity-70">
             <li><a href="mailto:info@safeeraconsulting.com" className="hover:opacity-100 transition-opacity">info@safeeraconsulting.com</a></li>
             <li><a href="https://t.me/SafeEraInvest" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">Telegram</a></li>
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-[11px] tracking-[0.22em] uppercase font-medium text-lime mb-5">{t('legal')}</h4>
+          <div className="text-[11px] tracking-[0.22em] uppercase font-medium text-lime mb-5">{t('legal')}</div>
           <ul className="list-none flex flex-col gap-3 text-sm font-light opacity-70">
             <li><a href="#" className="hover:opacity-100 transition-opacity">{t('privacy')}</a></li>
             <li><a href="#" className="hover:opacity-100 transition-opacity">{t('terms')}</a></li>
