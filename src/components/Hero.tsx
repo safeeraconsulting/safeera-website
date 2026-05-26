@@ -2,6 +2,7 @@
 
 import {useTranslations} from 'next-intl';
 import {useLocale} from 'next-intl';
+import Image from 'next/image';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -26,7 +27,7 @@ export default function Hero() {
         </video>
         {/* Mobile still image with logo */}
         <div className="absolute inset-0 z-10 lg:hidden">
-          <img src="/images/hero-still.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+          <Image src="/images/hero-still.png" alt="" fill className="object-cover" priority />
           <div className="absolute top-[12vh] left-0 right-0 flex justify-center">
             <img src="/logo/full_logo.svg" alt="SafeEra" className="w-[80%] max-w-[420px]" />
           </div>

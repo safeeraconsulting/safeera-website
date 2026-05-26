@@ -25,6 +25,28 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'SafeEra Property Consulting — Investment property. Built around your goal.',
   description: 'Boutique property consulting for investors entering the Cyprus, Georgia and Dubai markets. Strategy first, asset second.',
+  openGraph: {
+    title: 'SafeEra Property Consulting',
+    description: 'Investment property. Built around your goal. Cyprus, Georgia, Dubai.',
+    url: 'https://safeeraconsulting.com',
+    siteName: 'SafeEra Property Consulting',
+    images: [
+      {
+        url: 'https://safeeraconsulting.com/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'SafeEra Property Consulting',
+      },
+    ],
+    locale: 'uk_UA',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SafeEra Property Consulting',
+    description: 'Investment property. Built around your goal. Cyprus, Georgia, Dubai.',
+    images: ['https://safeeraconsulting.com/images/og-image.png'],
+  },
 };
 
 export default async function LocaleLayout({

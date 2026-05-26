@@ -371,5 +371,20 @@
     "terms": "Terms of Service",
     "copy": "© 2026 SafeEra Property Consulting. All rights reserved.",
     "builtIn": "Kyiv · Limassol · Tbilisi · Dubai"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "desc": "This page doesn't exist or has been moved.",
+    "cta": "Go to homepage"
+  },
+  "og": {
+    "homeTitle": "SafeEra Property Consulting",
+    "homeDesc": "Investment property. Built around your goal. Cyprus, Georgia, Dubai.",
+    "cyprusTitle": "Cyprus — SafeEra Property Consulting",
+    "cyprusDesc": "Investment property in Cyprus. PRP, branded residences, off-plan.",
+    "georgiaTitle": "Georgia — SafeEra Property Consulting",
+    "georgiaDesc": "Investment property in Georgia. Batumi, Tbilisi, high rental yield.",
+    "dubaiTitle": "Dubai — SafeEra Property Consulting",
+    "dubaiDesc": "Investment property in Dubai. Golden Visa, 0% income tax, premium assets."
   }
 }

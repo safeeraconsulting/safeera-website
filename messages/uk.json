@@ -371,5 +371,20 @@
     "terms": "Terms of Service",
     "copy": "© 2026 SafeEra Property Consulting. All rights reserved.",
     "builtIn": "Київ · Лімасол · Тбілісі · Дубай"
+  },
+  "notFound": {
+    "title": "Сторінку не знайдено",
+    "desc": "Ця сторінка не існує або була переміщена.",
+    "cta": "На головну"
+  },
+  "og": {
+    "homeTitle": "SafeEra Property Consulting",
+    "homeDesc": "Інвестиційна нерухомість під вашу ціль. Кіпр, Грузія, Дубай.",
+    "cyprusTitle": "Кіпр — SafeEra Property Consulting",
+    "cyprusDesc": "Інвестиційна нерухомість на Кіпрі. ПМП, branded residences, off-plan.",
+    "georgiaTitle": "Грузія — SafeEra Property Consulting",
+    "georgiaDesc": "Інвестиційна нерухомість у Грузії. Батумі, Тбілісі, висока дохідність.",
+    "dubaiTitle": "Дубай — SafeEra Property Consulting",
+    "dubaiDesc": "Інвестиційна нерухомість у Дубаї. Golden Visa, 0% податків, преміум-обʼєкти."
   }
 }

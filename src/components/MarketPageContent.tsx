@@ -3,6 +3,7 @@
 import {useTranslations} from 'next-intl';
 import {useLocale} from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import {useState} from 'react';
 
 type MarketKey = 'cy' | 'ge' | 'ae';
@@ -74,7 +75,7 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
     <main>
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-end">
-        <img src={heroImages[market]} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <Image src={heroImages[market]} alt="" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-forest/30 via-forest/10 to-forest/70" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 pt-32 w-full">
           <div className="mb-4 text-sm text-white/60 tracking-widest uppercase font-montserrat">
@@ -152,8 +153,8 @@ export default function MarketPageContent({market, hiddenMarketValue}: {market: 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {types.map((tp, i) => (
               <div key={i} className="group">
-                <div className="aspect-[4/3] rounded-sm mb-4 overflow-hidden">
-                  <img src={typeImages[market][i]} alt={tp.title} className="w-full h-full object-cover" />
+                <div className="relative aspect-[4/3] rounded-sm mb-4 overflow-hidden">
+                  <Image src={typeImages[market][i]} alt={tp.title} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
                 </div>
                 <div className="text-xs uppercase tracking-wider text-forest/50 mb-1">{tp.cat}</div>
                 <h4 className="text-forest font-semibold mb-1">{tp.title}</h4>

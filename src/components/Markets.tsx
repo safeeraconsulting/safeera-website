@@ -1,5 +1,6 @@
 import {useTranslations} from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import {useLocale} from 'next-intl';
 
 const marketData = [
@@ -37,11 +38,12 @@ export default function Markets() {
               className="group relative overflow-hidden aspect-[3/4] flex flex-col justify-end"
             >
               {/* Background photo */}
-              <img
+              <Image
                 src={market.image}
                 alt=""
-                className="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:blur-[6px] group-hover:scale-105"
-                loading="lazy"
+                fill
+                className="object-cover transition-all duration-500 group-hover:blur-[6px] group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-all duration-500" />
 
