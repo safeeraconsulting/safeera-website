@@ -13,8 +13,13 @@ export default function Hero() {
     <section className="min-h-screen relative text-white overflow-hidden isolate">
       {/* Video background (desktop) / gradient fallback (mobile) */}
       <div className="absolute inset-0 z-0">
-        {/* Mobile fallback gradient */}
-        <div className="absolute inset-0 h-full bg-gradient-to-br from-[#2a2a26] via-[#1b231d] to-[#0e1410] lg:hidden" />
+        {/* Mobile still image with logo */}
+        <div className="absolute inset-0 h-full lg:hidden">
+          <img src="/images/hero-still.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img src="/logo/full_logo.svg" alt="SafeEra" className="w-[60%] max-w-[320px]" />
+          </div>
+        </div>
         {/* Desktop video */}
         <video
           autoPlay
