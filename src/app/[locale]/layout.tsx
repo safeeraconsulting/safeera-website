@@ -23,8 +23,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://safeeraconsulting.com'),
   title: 'SafeEra Property Consulting — Investment property. Built around your goal.',
   description: 'Boutique property consulting for investors entering the Cyprus, Georgia and Dubai markets. Strategy first, asset second.',
+  alternates: {
+    canonical: '/',
+    languages: {
+      'uk': '/uk',
+      'en': '/en',
+    },
+  },
   openGraph: {
     title: 'SafeEra Property Consulting',
     description: 'Investment property. Built around your goal. Cyprus, Georgia, Dubai.',
