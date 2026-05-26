@@ -17,7 +17,7 @@ export default function MidsiteVideo() {
           observer.disconnect();
         }
       },
-      {rootMargin: '600px'} // start loading ~1-2 sections before visible
+      {rootMargin: '2000px'} // start loading early — ~4-5 sections ahead
     );
     observer.observe(sectionRef.current);
     return () => observer.disconnect();
