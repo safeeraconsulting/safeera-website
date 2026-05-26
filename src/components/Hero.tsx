@@ -13,23 +13,24 @@ export default function Hero() {
     <section className="min-h-screen relative text-white overflow-hidden isolate">
       {/* Video background (desktop) / gradient fallback (mobile) */}
       <div className="absolute inset-0 z-0">
-        {/* Mobile still image with logo */}
-        <div className="absolute inset-0 h-full lg:hidden">
-          <img src="/images/hero-still.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <img src="/logo/full_logo.svg" alt="SafeEra" className="w-[60%] max-w-[320px]" />
-          </div>
-        </div>
         {/* Desktop video */}
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="none"
           className="hidden lg:block absolute inset-0 w-full h-full object-cover"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
+        {/* Mobile still image with logo — z-10 to cover video */}
+        <div className="absolute inset-0 z-10 lg:hidden">
+          <img src="/images/hero-still.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img src="/logo/full_logo.svg" alt="SafeEra" className="w-[60%] max-w-[320px]" />
+          </div>
+        </div>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(20,27,22,0.25)] via-[rgba(20,27,22,0.05)] to-[rgba(20,27,22,0.55)] z-[1]" />
       </div>
