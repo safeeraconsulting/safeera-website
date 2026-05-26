@@ -27,8 +27,8 @@ export default function Hero() {
         {/* Mobile still image with logo — z-10 to cover video */}
         <div className="absolute inset-0 z-10 lg:hidden">
           <img src="/images/hero-still.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <img src="/logo/full_logo.svg" alt="SafeEra" className="w-[60%] max-w-[320px]" />
+          <div className="absolute inset-0 flex items-center justify-start pt-[18vh]">
+            <img src="/logo/full_logo.svg" alt="SafeEra" className="w-[75%] max-w-[400px] mx-auto" />
           </div>
         </div>
         {/* Dark overlay for text readability */}
@@ -37,7 +37,7 @@ export default function Hero() {
 
       {/* Bottom meta: markets + scroll indicator */}
       <div className="absolute bottom-8 left-[clamp(20px,5vw,80px)] right-[clamp(20px,5vw,80px)] flex justify-between items-end gap-6 z-[2] pointer-events-none">
-        <div className="flex gap-7 items-center text-[11px] font-medium tracking-[0.18em] uppercase flex-wrap pointer-events-auto">
+        <div className="flex gap-3 md:gap-7 items-center text-[10px] md:text-[11px] font-medium tracking-[0.14em] md:tracking-[0.18em] uppercase pointer-events-auto">
           <span>CY · {t('cyprus')}</span>
           <span className="w-1 h-1 bg-current rounded-full opacity-50" />
           <span>GE · {t('georgia')}</span>
